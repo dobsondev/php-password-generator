@@ -10,10 +10,12 @@ README
 	finds these characters, they are added to an array of valid characters.
 	Once all the valid characters are found from the combination word, the
 	array of valid characters is shuffled. The script then takes the first
-	character from the valid characters array, which will be random thanks to
-	the shuffle done to the array. The script then replaces every instance of
-	the chosen valid character in the combination word with a number or symbol
-	to increase the strength of the password. The mappings are as follows:
+	character from the valid characters array, which will be random thanks
+	to the shuffle done to the array. The script then replaces every
+	instance of the chosen valid character in the combination word with a
+	number or symbol to increase the strength of the password.
+
+	The mappings are as follows:
 
 												A ===> 4
 												a ===> @
@@ -39,50 +41,53 @@ README
 	be, and then scale the password with tricks such as these to increase
 	the security.
 
-	Once the particular character has been changed to its corresponding symbol
-	or number, the password is returned. The passwords returned look like two
-	english words that are perfectly readable (although granted some of the words
-	in the Unix dictionary are not regularly used in everyday language).
+	Once the particular character has been changed to its corresponding
+	symbol or number, the password is returned. The passwords returned look
+	like two english words that are perfectly readable (although granted
+	some of the words in the Unix dictionary are not regularly used in
+	everyday language).
 
 
 INSTALLATION
 
-	Copy the password-generator.php file as well as either the tiny-word.list or
-	word.list file onto your server. From there you are free to call the password
-	generator however you want. You can call it just as a single php call, or you
-	can use AJAX in order to get as many passwords as you want over and over without
-	reloading the page.
+	Copy the password-generator.php file as well as either the
+	tiny-word.list or word.list file onto your server. From there you are
+	free to call the password generator however you want. You can call it
+	just as a single php call, or you can use AJAX in order to get as many
+	passwords as you want over and over without reloading the page.
 
-	The different between word.list and tiny-word.list is that word.list contains
-	all the words found in the Unix dictionary file. tiny-word.list only contains
-	words that are between 5 and 10 characters long. I found that tiny-word.list
-	makes for better passwords, and the sizes are more predictable.
+	The different between word.list and tiny-word.list is that word.list
+	contains all the words found in the Unix dictionary file. tiny-word.list
+	only contains words that are between 5 and 10 characters long. I found
+	that tiny-word.list makes for better passwords, and the sizes are more
+	predictable.
 
 
 CONTACT
 
-	If you have any problems, concerns, or improvements, feel free to contact me
-	at alex@dobsondev.com. Of course this project is available at Git Hub under
-	https://github.com/SufferMyJoy/php-password-generator so feel free to branch
-   this project and make any changes you want. One of the large improvements
-   that could be made is making the word list only common words to help
-   readability of the passwords generated.
+	If you have any problems, concerns, or improvements, feel free to
+	contact me at alex@dobsondev.com. Of course this project is available
+	at Git Hub under https://github.com/SufferMyJoy/php-password-generator
+	so feel free to branch this project and make any changes you want. One
+	of the large improvements that could be made is making the word list
+	only common words to help readability of the passwords generated.
 
 
 LICENSE
 
 	Copyright (C) 2013 Alex Dobson
 
-	This program is free software; you can redistribute it and/or modify it under
-	the terms of the GNU General Public License as published by the Free Software
-	Foundation; either version 2 of the License, or (at your option) any later
-	version.
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 2 of the License, or
+	(at your option) any later version.
 
-	This program is distributed in the hope that it will be useful, but WITHOUT
-	ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-	FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+	This program is distributed in the hope that it will be useful, but
+	WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+	General Public License for more details.
 
 	You can read about the GNU General Public License at
-	http://opensource.org/licenses/GPL-3.0, or write to the Free Software
-	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA to
-	receive a copy.
+	http://opensource.org/licenses/GPL-3.0, or write to the Free
+	Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+	MA 02111-1307 USA to receive a copy.
