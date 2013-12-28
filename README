@@ -1,75 +1,88 @@
-  __________  ___ _____________  __________                        _________                        __                
-  \______   \/   |   \______   \ \______   \_____    ______ ______ \_   ___ \_______   ____ _____ _/  |_  ___________ 
-   |     ___/    ~    \     ___/  |     ___/\__  \  /  ___//  ___/ /    \  \/\_  __ \_/ __ \\__  \\   __\/  _ \_  __ \
-   |    |   \    Y    /    |      |    |     / __ \_\___ \ \___ \  \     \____|  | \/\  ___/ / __ \|  | (  <_> )  | \/
-   |____|    \___|_  /|____|      |____|    (____  /____  >____  >  \______  /|__|    \___  >____  /__|  \____/|__|   
-                   \/                            \/     \/     \/          \/             \/     \/                 
-                 
-                 
+PHP Password Generator
+
 README
 
-	This PHP Password Generator creates a randomly generated password from two randomly selected words from the
-	Unix Dictionary file ("/usr/share/dict/words"). The script takes the two words, capitalizes their first letters, 
-	and finally concatenates them together. The script then searches the combination word for certain characters. 
-	If the script finds these characters, they are added to an array of valid characters. Once all the valid characters
-	are found from the combination word, the array of valid characters is shuffled.
-	
-	The script then takes the first character from the valid characters array, which will be random thanks to the
-	shuffle done to the array. The script then replaces every instance of the chosen valid character in the combination
-	word with a number or symbol to increase the strength of the password. The mappings are as follows:
-			
+	This PHP Password Generator creates a randomly generated password from
+	two randomly selected words from the Unix Dictionary file
+	("/usr/share/dict/words"). The script takes the two words, capitalizes
+	their first letters, and finally concatenates them together. The script
+	then searches the combination word for certain characters. If the script
+	finds these characters, they are added to an array of valid characters.
+	Once all the valid characters are found from the combination word, the
+	array of valid characters is shuffled. The script then takes the first
+	character from the valid characters array, which will be random thanks to
+	the shuffle done to the array. The script then replaces every instance of
+	the chosen valid character in the combination word with a number or symbol
+	to increase the strength of the password. The mappings are as follows:
+
 												A ===> 4
+												a ===> @
 												E ===> 3
+												e ===> 3
 												I ===> 1
+												i ===> 1
 												O ===> 0
-												U ===> Ü or ü depending on case
+												o ===> 0
+												U ===> Ü
+												u ===> ü
 												G ===> 9
+												g ===> 9
 												S ===> $
+												s ===> 5
 												T ===> 7
-												
-	Once the particular character has been changed to its corresponding symbol or number, the password is returned. The
-	passwords returned look like two english words that are perfectly readable (although granted some of the words in
-	the Unix dictionary are not regularly used in everyday language).
-	
-	
+												t ===> 7
+
+	There is also a 20% chance that the password generator will add an "!"
+	to the end of the password, and another 20% chance that the generator
+	will add a "#" to the front of the password. In the future it would be
+	nice to have a feature which determines how secure the password has to
+	be, and then scale the password with tricks such as these to increase
+	the security.
+
+	Once the particular character has been changed to its corresponding symbol
+	or number, the password is returned. The passwords returned look like two
+	english words that are perfectly readable (although granted some of the words
+	in the Unix dictionary are not regularly used in everyday language).
+
+
 INSTALLATION
 
-	In order to install the script to your website, simply copy the PHP code contained in password-generator.php to
-	whatever webpage you want it to on. Be sure to replace the "echo $password . "\n"" statement with code appropriate
-	to your website. The comments in the file contain an example of HTML echo statements that look pretty good (in
-	my opinion of course).
-	
-	The final piece to the installation is to of course transfer the word.list file to your server for the script to
-	use. You can put this anywhere that the script has privileges to. For example, one a Wordpress installation, I
-	usually put it under "wp-content/themes/YourTheme-Child/word.list". This may seem like a major security risk, but
-	this whole password generator is open-source and the dictionary used is available to anyone with a Unix computer,
-	and since Unix distributions are free, the dictionary file is free to anyone. Therefore, I see no point in hiding
-	the file for any reason, the only harm that could come is if you for some reason gave writing access to the file
-	and an attacker reduced the word list in order to make cracking passwords easier, so don't do that.
-	
-	The passwords have such a large degree of randomness in both the word selection and the character replacement
-	scheme, that even with the dictionary file, it would take far too long to brute force a password.
-	
+	Copy the password-generator.php file as well as either the tiny-word.list or
+	word.list file onto your server. From there you are free to call the password
+	generator however you want. You can call it just as a single php call, or you
+	can use AJAX in order to get as many passwords as you want over and over without
+	reloading the page.
+
+	The different between word.list and tiny-word.list is that word.list contains
+	all the words found in the Unix dictionary file. tiny-word.list only contains
+	words that are between 5 and 10 characters long. I found that tiny-word.list
+	makes for better passwords, and the sizes are more predictable.
+
 
 CONTACT
-	
-	If you have any problems, concerns, or improvements, feel free to contact me at alex@dobsondev.com. Of course this
-	project is available at Git Hub under https://github.com/SufferMyJoy/php-password-generator so feel free to branch
-	this project and make any changes you want. One of the large improvements that could be made is making the word
-	list only common words to help readability of the passwords generated. 
-	
-	
+
+	If you have any problems, concerns, or improvements, feel free to contact me
+	at alex@dobsondev.com. Of course this project is available at Git Hub under
+	https://github.com/SufferMyJoy/php-password-generator so feel free to branch
+   this project and make any changes you want. One of the large improvements
+   that could be made is making the word list only common words to help
+   readability of the passwords generated.
+
+
 LICENSE
-	
-	Copyright (C) <year> <name of author>
 
-	This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public
-	License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any
-	later version.
+	Copyright (C) 2013 Alex Dobson
 
-	This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied
-	warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
-	details.
+	This program is free software; you can redistribute it and/or modify it under
+	the terms of the GNU General Public License as published by the Free Software
+	Foundation; either version 2 of the License, or (at your option) any later
+	version.
 
-	You can read about the GNU General Public License at http://opensource.org/licenses/GPL-3.0, or write to the
-	Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA to receive a copy.
+	This program is distributed in the hope that it will be useful, but WITHOUT
+	ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+	FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+	You can read about the GNU General Public License at
+	http://opensource.org/licenses/GPL-3.0, or write to the Free Software
+	Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA to
+	receive a copy.
