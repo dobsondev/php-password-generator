@@ -17,22 +17,22 @@ README
 
 	The mappings are as follows:
 
-												A ===> 4
-												a ===> @
-												E ===> 3
-												e ===> 3
-												I ===> 1
-												i ===> 1
-												O ===> 0
-												o ===> 0
-												U ===> Ü
-												u ===> ü
-												G ===> 9
-												g ===> 9
-												S ===> $
-												s ===> 5
-												T ===> 7
-												t ===> 7
+									A ===> 4
+									a ===> @
+									E ===> 3
+									e ===> 3
+									I ===> 1
+									i ===> 1
+									O ===> 0
+									o ===> 0
+									U ===> Ü
+									u ===> ü
+									G ===> 9
+									g ===> 9
+									S ===> $
+									s ===> 5
+									T ===> 7
+									t ===> 7
 
 	There is also a 20% chance that the password generator will add an "!"
 	to the end of the password, and another 20% chance that the generator
