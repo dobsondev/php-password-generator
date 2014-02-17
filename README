@@ -15,6 +15,15 @@ README
 	instance of the chosen valid character in the combination word with a
 	number or symbol to increase the strength of the password.
 
+	The number of characters replaced is determined by the "readability"
+	level of the password. The user can make the distinction between a
+	more readable password or a more secure password. This will change the
+	amount of mappings that occur.
+
+	By default the password generator has 3 levels, but you could change
+	this to best suite your individual needs. Note that if you want to add
+	more levels, you will have to add the code yourself.
+
 	The mappings are as follows:
 
 		A ===> 4
@@ -55,6 +64,11 @@ INSTALLATION
 	free to call the password generator however you want. You can call it
 	just as a single php call, or you can use AJAX in order to get as many
 	passwords as you want over and over without reloading the page.
+
+	In this project is a sample template file that would be used with a
+	WordPress installation in order to have a password generator page. The
+	template page then calls password-generator.js which in turn calls
+	password-generator.php (it is an AJAX call).
 
 	The different between word.list and tiny-word.list is that word.list
 	contains all the words found in the Unix dictionary file. tiny-word.list
