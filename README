@@ -3,17 +3,19 @@ PHP Password Generator
 README
 
 	This PHP Password Generator creates a randomly generated password from
-	two randomly selected words from the Unix Dictionary file
-	("/usr/share/dict/words"). The script takes the two words, capitalizes
-	their first letters, and finally concatenates them together. The script
-	then searches the combination word for certain characters. If the script
-	finds these characters, they are added to an array of valid characters.
-	Once all the valid characters are found from the combination word, the
-	array of valid characters is shuffled. The script then takes the first
-	character from the valid characters array, which will be random thanks
-	to the shuffle done to the array. The script then replaces every
-	instance of the chosen valid character in the combination word with a
-	number or symbol to increase the strength of the password.
+	two randomly selected words from either the Unix Dictionary file
+	("/usr/share/dict/words") or a word from a list of adjectives and a
+	word from a list of animals. The script takes the two words,
+	capitalizes their first letters, and finally concatenates them together.
+	The script then searches the combination word for certain characters.
+	If the script finds these characters, they are added to an array of
+	valid characters. Once all the valid characters are found from the
+	combination word, the array of valid characters is shuffled. The script
+	then takes the first character from the valid characters array, which
+	will be random thanks to the shuffle done to the array. The script then
+	replaces a certain amount of instances of the chosen valid character in
+	the combination word with a number or symbol to increase the strength
+	of the password.
 
 	The number of characters replaced is determined by the "readability"
 	level of the password. The user can make the distinction between a
