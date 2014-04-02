@@ -134,50 +134,76 @@
       // Readability = 1
       // Replace at most one letter per word, passwords should resemble english
 
-      $changing_character = $valid_characters_one[0];
+      $changed_char_count_one = 0;
+      for ($i = 0; $i < $valid_characters_count_one; $i++) {
+         $changing_character = $valid_characters_one[$i];
 
-      if ($changing_character == "A") {
-         $word_one = str_replace("A", "A", $word_one);
-         $word_one = str_replace("a", "@", $word_one);
-      }
-      else if ($changing_character == "E") {
-         $word_one = str_replace("E", "3", $word_one);
-         $word_one = str_replace("e", "e", $word_one);
-      }
-      else if ($changing_character == "I") {
-         $word_one = str_replace("I", "1", $word_one);
-         $word_one = str_replace("i", "1", $word_one);
-      }
-      else if ($changing_character == "O") {
-         $word_one = str_replace("O", "0", $word_one);
-         $word_one = str_replace("o", "0", $word_one);
-      }
-      else if ($changing_character == "S") {
-         $word_one = str_replace("S", "$", $word_one);
-         $word_one = str_replace("s", "$", $word_one);
+         if ($changing_character == "A"
+            && $changed_char_count_one < 1) {
+            $word_one = str_replace("A", "4", $word_one);
+            $word_one = str_replace("a", "@", $word_one);
+            $changed_char_count_one++;
+         }
+         else if ($changing_character == "E"
+            && $changed_char_count_one < 1) {
+            $word_one = str_replace("E", "3", $word_one);
+            $word_one = str_replace("e", "3", $word_one);
+            $changed_char_count_one++;
+         }
+         else if ($changing_character == "I"
+            && $changed_char_count_one < 1) {
+            $word_one = str_replace("I", "1", $word_one);
+            $word_one = str_replace("i", "1", $word_one);
+            $changed_char_count_one++;
+         }
+         else if ($changing_character == "O"
+            && $changed_char_count_one < 1) {
+            $word_one = str_replace("O", "0", $word_one);
+            $word_one = str_replace("o", "0", $word_one);
+            $changed_char_count_one++;
+         }
+         else if ($changing_character == "S"
+            && $changed_char_count_one < 1) {
+            $word_one = str_replace("S", "$", $word_one);
+            $word_one = str_replace("s", "$", $word_one);
+            $changed_char_count_one++;
+         }
       }
 
-      $changing_character = $valid_characters_two[0];
+      $changed_char_count_two = 0;
+      for ($i = 0; $i < $valid_characters_count_two; $i++) {
+         $changing_character = $valid_characters_two[$i];
 
-      if ($changing_character == "A") {
-         $word_two = str_replace("A", "@", $word_two);
-         $word_two = str_replace("a", "@", $word_two);
-      }
-      else if ($changing_character == "E") {
-         $word_two = str_replace("E", "3", $word_two);
-         $word_two = str_replace("e", "e", $word_two);
-      }
-      else if ($changing_character == "I") {
-         $word_two = str_replace("I", "1", $word_two);
-         $word_two = str_replace("i", "1", $word_two);
-      }
-      else if ($changing_character == "O") {
-         $word_two = str_replace("O", "0", $word_two);
-         $word_two = str_replace("o", "0", $word_two);
-      }
-      else if ($changing_character == "S") {
-         $word_two = str_replace("S", "$", $word_two);
-         $word_two = str_replace("s", "$", $word_two);
+         if ($changing_character == "A"
+            && $changed_char_count_two < 1) {
+            $word_two = str_replace("A", "4", $word_two);
+            $word_two = str_replace("a", "@", $word_two);
+            $changed_char_count_two++;
+         }
+         else if ($changing_character == "E"
+            && $changed_char_count_two < 1) {
+            $word_two = str_replace("E", "3", $word_two);
+            $word_two = str_replace("e", "3", $word_two);
+            $changed_char_count_two++;
+         }
+         else if ($changing_character == "I"
+            && $changed_char_count_two < 1) {
+            $word_two = str_replace("I", "1", $word_two);
+            $word_two = str_replace("i", "1", $word_two);
+            $changed_char_count_two++;
+         }
+         else if ($changing_character == "O"
+            && $changed_char_count_two < 1) {
+            $word_two = str_replace("O", "0", $word_two);
+            $word_two = str_replace("o", "0", $word_two);
+            $changed_char_count_two++;
+         }
+         else if ($changing_character == "S"
+            && $changed_char_count_two < 1) {
+            $word_two = str_replace("S", "$", $word_two);
+            $word_two = str_replace("s", "5", $word_two);
+            $changed_char_count_two++;
+         }
       }
    } else if ($readability == 2) {
       // Readability = 2
