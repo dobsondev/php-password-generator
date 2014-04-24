@@ -1,22 +1,17 @@
 <?php /* Template Name: PHP Password Generator */ ?>
 <?php
+  // MAKE SURE YOU FILL OUT THIS PART OF THE TEMPLATE. THIS IS THE
+  // NAME OF THE FOLDER FOR THE THEME YOU ARE USING WITH THE
+  // PASSWORD GENERATOR
+  $THEME_FOLDER = "dobsondev-child";
+
   get_header();
   do_action('dobsondev_before_content');
 ?>
-<script type="text/javascript" src="/wp-content/themes/dobsondev-child/password-generator/password-generator.js"></script>
-<style type="<?php echo 'text/css'; ?>">
-  #password-location-div {
-    text-align: center;
-    border: 1px solid black;
-    padding: 3px 3px 3px 3px;
-  }
+<script type="text/javascript" src="/wp-content/themes/<?php echo $THEME_FOLDER; ?>/php-password-generator/password-generator.js"></script>
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/<?php echo $THEME_FOLDER; ?>/php-password-generator/password-generator.css" />
 
-  #password-input {
-     text-align: center;
-     font-size: 225%;
-     margin: 0 auto;
-  }
-</style>
+<div id="hidden-theme-folder" style="display: none;"><?php echo $THEME_FOLDER ?></div>
 
 <h2> Your password is: </h2>
 

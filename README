@@ -61,22 +61,18 @@ README
 
 INSTALLATION
 
-	Copy the password-generator.php file as well as either the
-	tiny-word.list or word.list file onto your server. From there you are
-	free to call the password generator however you want. You can call it
-	just as a single php call, or you can use AJAX in order to get as many
-	passwords as you want over and over without reloading the page.
+	WordPress
 
-	In this project is a sample template file that would be used with a
-	WordPress installation in order to have a password generator page. The
-	template page then calls password-generator.js which in turn calls
-	password-generator.php (it is an AJAX call).
+	If you are using WordPress (which is what this is made for) then simply
+	copy the entire folder into the theme you are using. Next, open the
+	template-password-generator.php file and modify the $THEME_FOLDER
+	variable to match the folder of the theme you are using.
 
-	The different between word.list and tiny-word.list is that word.list
-	contains all the words found in the Unix dictionary file. tiny-word.list
-	only contains words that are between 5 and 10 characters long. I found
-	that tiny-word.list makes for better passwords, and the sizes are more
-	predictable.
+	Everything should work now.
+
+	Non WordPress users have to make your own template that works by
+	calling the password-generator.js file as an AJAX call. You will have
+	to read the code and figure this out on your own. Good luck!
 
 
 CONTACT

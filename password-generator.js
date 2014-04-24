@@ -4,6 +4,7 @@ jQuery(document).ready(function($) {
 
 // Get Password Function
 function getPassword() {
+   var themeFolder = jQuery("#hidden-theme-folder").text();
    jQuery("#password-location-div").hide();
    jQuery("#loading").show();
 
@@ -11,7 +12,7 @@ function getPassword() {
    jQuery.ajax({
       type: "POST",
       data: "readability=" + jQuery("#readability").val(),
-      url: "/wp-content/themes/dobsondev-child/password-generator/password-generator.php",
+      url: "/wp-content/themes/" + themeFolder + "/php-password-generator/password-generator.php",
       dataType: 'json',
       success: function(data) {
          if (data.length < 8) {
