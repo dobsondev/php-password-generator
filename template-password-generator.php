@@ -3,8 +3,8 @@
   get_header();
   do_action('dobsondev_before_content');
 ?>
-<script type="text/javascript" src="/wp-content/themes/dobsondev-child/password-generator.js"></script>
-<style type="text/css">
+<script type="text/javascript" src="/wp-content/themes/dobsondev-child/password-generator/password-generator.js"></script>
+<style type="<?php echo 'text/css'; ?>">
   #password-location-div {
     text-align: center;
     border: 1px solid black;
