@@ -64,11 +64,15 @@ INSTALLATION
 	WordPress
 
 	If you are using WordPress (which is what this is made for) then simply
-	copy the entire folder into the theme you are using. Next, open the
-	template-password-generator.php file and modify the $THEME_FOLDER
-	variable to match the folder of the theme you are using.
+	copy the entire folder (rename it php-password-generator if it was
+	called php-password-generator-master when you downloaded it) into the
+	theme you are using. Next, open the template-password-generator.php file
+	and modify the $THEME_FOLDER variable to match the folder of the theme
+	you are using.
 
-	Everything should work now.
+	Be sure that you have the renamed the folder php-password-generator if
+	it was called php-password-generator-master. At this point everything
+	should work.
 
 	Non WordPress users have to make your own template that works by
 	calling the password-generator.js file as an AJAX call. You will have
