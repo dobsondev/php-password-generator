@@ -69,6 +69,10 @@ INSTALLATION
 	and modify the $THEME_FOLDER variable to match the folder of the theme
 	you are using.
 
+	Everything should work from here. You can simply select the page you
+	want to contain the password generator, give it the template of
+	"PHP Password Generator" and then everything should work on that page.
+
 	Non WordPress users have to make your own template that works by
 	calling the password-generator.js file as an AJAX call. You will have
 	to read the code and figure this out on your own. Good luck!
