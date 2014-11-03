@@ -1,6 +1,6 @@
 #PHP Password Generator
 
-##README
+##BASIC INFORMATION
 
 This PHP Password Generator creates a randomly generated password from two randomly selected words from either the Unix Dictionary file ("/usr/share/dict/words") or a word from a list of adjectives and a word from a list of animals. The script takes the two words, capitalizes their first letters, and finally concatenates them together. The script then searches the combination word for certain characters. If the script finds these characters, they are added to an array of valid characters. Once all the valid characters are found from the combination word, the array of valid characters is shuffled. The script then takes the first character from the valid characters array, which will be random thanks to the shuffle done to the array. The script then replaces a certain amount of instances of the chosen valid character in the combination word with a number or symbol to increase the strength of the password.
 
@@ -39,13 +39,13 @@ If you are using WordPress (which is what this is made for) then simply copy the
 
 Everything should work from here. You can simply select the page you want to contain the password generator, give it the template of "PHP Password Generator" and then everything should work on that page.
 
-###Non-WordPress
+###Non WordPress
 
 Non WordPress users have to make your own template that works by calling the password-generator.js file as an AJAX call. You will have to read the code and figure this out on your own. Good luck!
 
 ##CONTACT
 
-If you have any problems, concerns, or improvements, feel free to contact me at alex@dobsondev.com. Of course this project is available at Git Hub under https://github.com/SufferMyJoy/php-password-generator so feel free to branch this project and make any changes you want. One of the large improvements that could be made is making the word list only common words to help readability of the passwords generated.
+If you have any problems, concerns, or improvements, feel free to contact me at [mailto:alex@dobsondev.com](alex@dobsondev.com). Of course this project is available at Git Hub under [https://github.com/SufferMyJoy/php-password-generator](https://github.com/SufferMyJoy/php-password-generator) so feel free to branch this project and make any changes you want. One of the large improvements that could be made is making the word list only common words to help readability of the passwords generated.
 
 ##LICENSE
 
