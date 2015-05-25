@@ -16,7 +16,7 @@
 <h2> Your password is: </h2>
 
 <div id="loading" class="spin-1"> </div>
-<div id="password-location-div"> <input type="text" id="password-input" size="30" /> </div>
+<div id="password-location-div"> <input type="text" id="password-input" /> </div>
 <h4 style="text-align: center; margin-top: 30px;"> Readablility </h4>
 <div style="text-align: center; margin-bottom: 30px;">More Readable <input type="range" name="readability" id="readability" min="1" max="3"> More Secure </div>
 <div class="blue-button" id="new-password-button" onClick="getPassword();"> New Password </div>
