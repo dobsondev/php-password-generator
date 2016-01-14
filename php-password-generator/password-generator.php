@@ -377,4 +377,5 @@
    $result = array("password" => $password,);
 
    echo json_encode($password);
+
 ?>

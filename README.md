@@ -43,6 +43,18 @@ Everything should work from here. You can simply select the page you want to con
 
 Non WordPress users have to make your own template that works by calling the password-generator.js file as an AJAX call. You will have to read the code and figure this out on your own. Good luck!
 
+##Creating Examples of Passwords
+
+Examples of the three levels of complexity can be found in the `examples/` folder. They are labelled with their complexities in the file names and have 250 examples of passwords from that complexity level.
+
+If you're looking for more examples or want to create some examples yourself, I've create another script called `create-example-passwords.php`. This can be found in the main `php-password-generator/` folder. I recommend running it via the command line and saving the output to a file. An example of doing this on Unix can be found below:
+
+```shell
+php -r "require 'create-example-passwords.php'; createExamplePasswords(1, 250);" > example-passes.txt
+```
+
+This will create 250 passwords of complexity 1.
+
 ##CONTACT
 
 If you have any problems, concerns, or improvements, feel free to contact me at [mailto:alex@dobsondev.com](alex@dobsondev.com). Of course this project is available at Git Hub under [https://github.com/SufferMyJoy/php-password-generator](https://github.com/SufferMyJoy/php-password-generator) so feel free to branch this project and make any changes you want. One of the large improvements that could be made is making the word list only common words to help readability of the passwords generated.
